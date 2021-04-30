@@ -1,4 +1,4 @@
-:: @brief Find the newest .rs file in a folder and compile it with rustc
+:: @brief Find the newest .rs file in a folder and compile it with cargo
 :: @author Decameron
 
 @echo off
@@ -7,5 +7,5 @@ for /f "delims=" %%f in ('dir /b /a-d /od /tw %cd%\*.rs') do (
 )
 
 echo The newest file is: %file%
-echo Compiling %file% with RUSTC...
-call %userprofile%\.cargo\bin\rustc %file%
+echo Compiling %file% with CARGO...
+call %userprofile%\.cargo\bin\cargo %file%
