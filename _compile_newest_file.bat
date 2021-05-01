@@ -8,4 +8,5 @@ for /f "delims=" %%f in ('dir /b /a-d /od /tw %cd%\*.rs') do (
 
 echo The newest file is: %file%
 echo Compiling %file% with CARGO...
-call %userprofile%\.cargo\bin\cargo %file%
+call %userprofile%\.cargo\bin\cargo run 
+:: %file%
